@@ -1,0 +1,659 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+@media screen and (min-width: 650px) {
+    .grille {
+        grid-template-areas:
+            "header header header header header"
+            "main main main main aside"
+            "footer footer footer footer footer";
+    }
+}
+
+.grille3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.grille4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "professions descriptions"
+        "sources sources";
+    margin:4em;
+}
+
+@media screen and (min-width: 900px) {
+    .grille4 {
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+            "professions descriptions sources";
+        margin: 4em;
+    }
+}
+
+
+
+h3 {
+    text-align: center;
+}
+
+aside>p {
+    width: 100%;
+    text-align: center;
+}
+
+.grille2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+@media screen and (min-width: 900px) {
+    .grilleHoraire1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "plage lundi"
+            "mardi mercredi"
+            "jeudi vendredi";
+        border: 2px solid black;
+        padding: 1em;
+        margin: 3em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grilleHoraire1 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "plage lundi mardi mercredi jeudi vendredi";
+        border: 2px solid black;
+        padding: 1em;
+        margin: 3em;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    min-height: 5em;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 8em;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.grilleHoraire {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 2.5em;
+    margin-left: 7em;
+    margin-right: 7em;
+    border: 2px solid black;
+}
+
+.grilleHoraire>div {
+    padding: 1em;
+}
+
+
+.titreheader {
+    margin: 0.5em;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: rgb(204, 201, 220);
+    margin-bottom: 1.3em;
+}
+
+.menu>a {
+    color: rgb(204, 201, 220);
+    border: 2px solid rgb(204, 201, 220);
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+header {
+    grid-area: header;
+    padding: 1.5em;
+    background-color: rgb(50, 74, 95);
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+nav {
+    padding: 0.8em;
+    padding-top: 1.2em;
+}
+
+a {
+    margin-right: 2em;
+}
+
+main {
+    grid-area: main;
+}
+
+article {
+    padding: 3em;
+    padding-right: 3em;
+}
+
+p {
+    line-height: 250%;
+    float: left;
+}
+
+#photoalex {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    float: right;
+    margin-right: 2em;
+}
+
+aside {
+    background-color: rgb(218, 211, 203);
+}
+
+footer {
+    padding: 1.5em;
+    grid-area: footer;
+    background-color: rgb(158, 59, 84);
+}
+
+a {
+    color: rgb(56, 59, 250);
+}
+
+a:hover {
+    color: rgb(226, 18, 18);
+}
+
+div.liste {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    line-height: 180%;
+    float: right;
+}
+
+.titreliste {
+    font-weight: 600;
+    list-style: none;
+}
+
+.titreliste2 {
+    font-size: 23px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.soustitreliste {
+    list-style: disc;
+}
+
+li {
+    font-weight: 500;
+}
+
+aside {
+    padding: 2em;
+}
+
+.boite {
+    border: 2px solid black;
+    padding: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 4em;
+}
+
+.boite>div {
+    margin: 1em;
+    padding-right: 1em;
+}
+
+.titreHoraire {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.jour {
+    text-align: center;
+}
+
+.plageTitre,
+.jour {
+    font-weight: 600;
+}
+
+.infoCours {
+    font-size: 15px;
+}
+
+h4 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 20%;
+}
+
+.first>div:nth-child(odd) {
+    background-color: rgb(126, 126, 184);
+}
+
+.first>div {
+    border: 1.8px solid black;
+    padding: 1em;
+}
+
+.codeCours {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.nomCours {
+    font-weight: bold;
+}
+
+.imageBoite {
+    max-width: 400px;
+    float: right;
+    margin: 1em;
+}
+
+.litterature {
+    background-color: rgb(144, 144, 235);
+}
+
+.prog {
+    background-color: rgb(77, 208, 97);
+}
+
+.web {
+    background-color: rgb(252, 75, 128);
+}
+
+.maths {
+    background-color: rgba(230, 160, 56, 0.824);
+}
+
+.exploitation {
+    background-color: rgb(255, 251, 144);
+}
+
+.philo {
+    background-color: rgb(251, 197, 238);
+}
+
+#plage {
+    grid-area: plage;
+}
+
+#lundi {
+    grid-area: lundi;
+}
+
+#mardi {
+    grid-area: mardi;
+}
+
+#mercredi {
+    grid-area: mercredi;
+}
+
+#jeudi {
+    grid-area: jeudi;
+}
+
+#vendredi {
+    grid-area: vendredi;
+}
+
+#professions {
+    grid-area: professions;
+}
+
+#descriptions {
+    grid-area: descriptions;
+}
+
+#sources {
+    grid-area: sources;
+}
+
+
+.grille5 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+
+@media screen and (min-width: 1150px) {
+    .grille5 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .grille5 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+}
+
+.ufc {
+    background-color: rgb(224, 224, 224);
+}
+
+.ufclogo {
+    display: flex;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    justify-content: center;
+}
+
+.ufctitre {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 2.5em;
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+    min-height: 20em;
+    padding: 1em;
+    border: 2px solid black;
+    margin-bottom: 2.5em;
+    background-color: rgb(184, 18, 18);
+    border-radius: 15px;
+    margin-right: 7em;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+.ufcmug {
+    width: 350px;
+    border: 2px solid black;
+    background-image: url("/images/ufcback.jpg");
+    border-radius: 15px;
+    margin: auto;
+}
+
+.ufclink{
+    margin: auto;
+}
+
+.ufcnom,
+.ufctexte {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 21px;
+    color: white;
+}
+
+.ufcnom {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.position {
+    width: 12%;
+    margin: auto;
+    margin-bottom: 1em;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.score {
+    font-size: 15px;
+}
+
+#numero1 {
+    color: rgba(214, 211, 24, 0.753);
+    border: 2px solid rgba(214, 211, 24, 0.753);
+    outline: 1px solid rgb(160, 135, 26);
+}
+
+#numero2 {
+    color: rgb(172, 168, 168);
+    border: 2px solid rgb(172, 168, 168);
+    outline: 1px solid rgb(250, 238, 238);
+}
+
+#numero3 {
+    color: rgb(190, 84, 14);
+    border: 2px solid rgb(190, 84, 14);
+    outline: 1px solid rgb(223, 149, 101);
+}
+
+
+.ufclink>img:hover{         
+    width: 380px;
+    opacity: 0.7;
+}
+
+.ufcnom>a {
+    color: white;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    text-align: center;
+}
+
+a.wiki:link {
+    text-decoration: underline;
+}
+
+.flag {
+    width: 40px;
+    margin: auto;
+    padding: 0.5em;
+}
+
+h2{
+    text-align: center;
+
+}
+
+.sujetright
+{
+    max-width: 450px;
+    float: right;
+}
+
+.sujetleft{
+    float: left;
+}
+
+
+
+.imageBoite2 {
+    max-width: 450px;
+    float: right;
+    margin: 1em;
+}
+
+.boite2 {
+    padding: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-bottom: 4em;
+}
+
+.boite2>div {
+    margin: 1.5em;
+    padding-right: 1.5em;
+}
+
+.liste, li
+{
+    line-height: 220%;
+}
+
+.liste2
+{
+    line-height: 180%;
+    margin-left: 10em;
+}
+
+.listetitre
+{
+    font-weight: 800;
+}
+
+.flexconteneur
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    flex-flow: row wrap;
+
+}
+
+.flexbox
+{
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: rgb(83, 83, 139);
+    color: white;
+    padding: 0.8em;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 0.7em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(83, 83, 139);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(44, 26, 112);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(151, 146, 214);
+    color: black;
+}
+
+.flexbox>img {
+    width: 300px;
+}
+
+.flexbox2>img {
+    width: 300px;
+}
+
+.flexconteneur2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div.flexbox {
+    margin-bottom: 4em;
+    margin-right: 2em;
+    margin-left: 2em;
+    max-width: 350px;
+}
+
+.flexbox3>img {
+    width: 300px;
+}
+
+.flexbox3 {
+    background-image: url("/images/icone-point-d-interrogation-question-rouge.png");
+    background-size: 180px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#image1,#image2 {
+    visibility: hidden;
+}
+
+.flexbox3:hover #image1 {
+    visibility: visible;
+    border: 4px solid black;
+}
+
+.flexbox3:active #image2 {
+    visibility: visible;
+    border: 4px solid black;
+}
